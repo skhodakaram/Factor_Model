@@ -1,4 +1,4 @@
-- This repository contains MATLAB files with which the numerical results of the paper **A Saddle Point Algorithm for Robust Data-Driven Factor Model Problems**  
+- This repository contains MATLAB files with which the numerical results of the paper **A Saddle Point Algorithm for Robust Data-Driven Factor Model Problems**
   [link](https://arxiv.org/abs/2506.09776) have been produced, including a main script file named `FM_main.m` and the corresponding functions. 
 
 - The factor model problem focuses on the decomposition of a covariance matrix $\Sigma$ to low-rank and diagnonal positive semidefinite matrices. In practice, $\Sigma$ is 
