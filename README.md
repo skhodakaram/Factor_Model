@@ -5,7 +5,7 @@
   often not available, and only its empirical counterpart, $\widehat{\Sigma}$, is available. To robustify to this approximation error, a common practice is to consider a 
   family of covariance matrices in the vicinity of $\widehat{\Sigma}$ defined as
   
-  $$ B_{\varepsilon}^{d}(\hat{\Sigma}) := \\{ \Sigma \succeq 0 ~ \colon ~ d(\Sigma,\hat{\Sigma}) \leq \varepsilon \\}, $$
+  $$ B_{\varepsilon}^{d}(\widehat{\Sigma}) := \\{ \Sigma \succeq 0 ~ : ~ d(\Sigma,\widehat{\Sigma}) \leq \varepsilon \\}, $$
   
   where $d$ is a generic distance function in the space of matrices, and $\varepsilon$ is the radius (size) of the set. Considering the target decomposition and the 
   uncertainty set $B_{\varepsilon}^{d_{+}}(\widehat{\Sigma})$, our robust data-driven factor model problem can be formulated as the optimization problem 
