@@ -13,7 +13,7 @@
   $$ \begin{array}{rcl} 
 		& \min\limits_{L, D } & \textrm{Tr}(L) \\
 		&\textrm{s.t.} & L \in S_{+}, D \in D_{+}, \\
-            	&& L + D \in B_{\varepsilon}^{d}(\widehat{\Sigma})\\
+            	&& L + D \in B_{\varepsilon}^{d}(\widehat{\Sigma})
      \end{array} $$
 
 - The numerical results have been produced as follows.
