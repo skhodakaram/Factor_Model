@@ -3,7 +3,11 @@ close all
 
 tStart = tic; 
 
-%% *** Flags (Code control parameters): problemCase, LMOcase & SweetSpot 
+%% *** Flags (Code control parameters): caseRealDataset, problemCase, LMOcase & SweetSpot 
+% ****** Determining whether to use real dataset or not
+caseRealDataset= 0; % Either 0 or 1:
+                    % 0: Synthetic dataset
+                    % 1: Real dataset
 % ****** Determining the optimiztion problem to be solved
 problemCase= 2; % Choices: 1, 2, 3, or 4
                 % 1: FM_Min: Min. problem with LMI constraint corresponding to Gelbrich distance - solved by MOSEK
@@ -21,7 +25,7 @@ SweetSpot= 0; % Either 0 or 1
               %    'N' measurement samples and solve the problem for each element of 'epsMat'.
 
 %% *** Dimension of xi 
-n_xi= 50 
+n_xi= 50; 
 
 %% *** Constants 
 % ****** Total number of iterations in FM_MaxMin ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -49,8 +53,13 @@ gradLambda= @(SigmaEq) SigmaEq';
 %% *** MAIN 
 for i= 1:NExp 
     disp(['Experiment:', num2str(i)])
-    % ****** Generating Samples
-    [xiMat,SigmaTrue,LTrue,DTrue,N]= genSamples(SweetSpot,n_xi);
+
+    if caseRealDataset == 0
+        % ****** Generating Samples
+        [xiMat,SigmaTrue,LTrue,DTrue,N]= genSamples(SweetSpot,n_xi);
+    else
+        [xiMat,n_xi,N]= loadRealDataset();
+    end
     % ****** Computing 'SigmaHat' matrix
     SigmaHat= computeSigmaHat(n_xi,xiMat,N);
     % *** Distance ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -87,13 +96,15 @@ for i= 1:NExp
         end
         
         % ****** Calculation of the estimation error of SigmaStar and SigmaHat
-        [SErrorMat(i,j),SHatErrorMat(i,j)]= calErrorMat(LMOcase,KL_Div,Gel_Dis,SigmaTrue,SigmaStar,SigmaHat);
+        if caseRealDataset == 0
+            [SErrorMat(i,j),SHatErrorMat(i,j)]= calErrorMat(LMOcase,KL_Div,Gel_Dis,SigmaTrue,SigmaStar,SigmaHat);
+        end
     end
 end
 
 %% *** Plot 
 % ****** Plotting sweet spot diagrams
-if SweetSpot == 1 
+if SweetSpot == 1 && caseRealDataset == 0
     plotSweetSpot(epsMat,SErrorMat,SHatErrorMat,LMOcase)
 end
 

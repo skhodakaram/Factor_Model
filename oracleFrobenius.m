@@ -5,7 +5,7 @@ function [Sigma]= oracleFrobenius(SigmaHat,Lambda,epsD)
     derivFunc= @(x) ( norm(SigmaS_g(x) - SigmaHat,'fro') )^2 - epsD^2;
     
     gamma_min= 0;
-    gamma_max= norm(Lambda,'fro');
+    gamma_max= norm(Lambda,'fro')/epsD;
     
     if abs(derivFunc(gamma_max)) <= 10^-10 % Checking if SigmaStar is on the boundary of the Frobenius ball
         gamma= gamma_max;

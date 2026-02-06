@@ -12,7 +12,7 @@ function [Sigma]= oracleWassDistRobustKF(SigmaHat,D,epsD)
 
     % Bisection
     LB0= max( eig((D+D')/2) ); 
-    UB0= norm(-D,'fro') * ( 2 * (max(eig(SigmaHat)))^0.5 + epsD); 
+    UB0= (norm(-D,'fro') /epsD ) * ( 2 * (max(eig(SigmaHat)))^0.5 + epsD); 
 
     gamma= minOverGammaBisection(partialObjFunc_gamma,LB0,UB0);
 
