@@ -1,3 +1,4 @@
+% Author: Shabnam Khodakaramzadeh, researcher at TU Delft
 function [Sigma]= oracleKullbackLeibler(SigmaHat,D,eps) 
 % Computing the oracle O(Lambda), when d is defined based on Kullback-Leibler divergence
     

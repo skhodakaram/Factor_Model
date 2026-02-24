@@ -1,3 +1,4 @@
+% Author: Shabnam Khodakaramzadeh, researcher at TU Delft
 function []= plotErrorObjVal(objValConvMat,i,j)
     maxIter= size(objValConvMat,3); % Total number of iterations
     tConv= 1:maxIter;

@@ -1,3 +1,4 @@
+% Author: Shabnam Khodakaramzadeh, researcher at TU Delft
 function [xiMat,SigmaTrue,LTrue,DTrue,N]= genSamples(SweetSpot,n_xi)
 % Generating samples of xi, and generating SigmaTrue, LTrue, and DTrue matrices
     % n_xi is the dimension of the samples

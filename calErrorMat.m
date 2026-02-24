@@ -1,3 +1,4 @@
+% Author: Shabnam Khodakaramzadeh, researcher at TU Delft
 function [SErrorMat,SHatErrorMat]= calErrorMat(LMOcase,KL_Div,Gel_Dis,SigmaTrue,SigmaStar,SigmaHat) 
     if LMOcase == 1 % Frobenius norm
         SErrorMat= norm(SigmaTrue - SigmaStar,'fro');

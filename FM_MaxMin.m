@@ -1,3 +1,4 @@
+% Author: Shabnam Khodakaramzadeh, researcher at TU Delft
 function [SigmaStar,LambdaStar,SigmaIterMat,LambdaIterMat,objValConv,objValStar,objValAvgConv,SigmaAvgIterMat,LambdaAvgIterMat,tdVec]= ...
     FM_MaxMin(LagrangianEq,gradLambda,SigmaHat,epsD,LMOcase,numIter) 
 % Solving Max-Min problem using GA with 1/sqrt(t) step size         

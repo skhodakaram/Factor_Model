@@ -1,3 +1,4 @@
+% Author: Shabnam Khodakaramzadeh, researcher at TU Delft
 function Q= generateSymPosDefMatrix(n)
     eValQ= rand(n,1) + 0.2*ones(n,1); 
     eValQ= diag(eValQ);

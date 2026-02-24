@@ -1,3 +1,4 @@
+% Author: Shabnam Khodakaramzadeh, researcher at TU Delft
 function [Sigma]= oracleFrobenius(SigmaHat,Lambda,epsD)
 % Computing the oracle O(Lambda), when d is defined based on Frobenius norm
     % *** Bisection method

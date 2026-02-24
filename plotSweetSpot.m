@@ -1,3 +1,4 @@
+% Author: Shabnam Khodakaramzadeh, researcher at TU Delft
 function []= plotSweetSpot(epsMat,SErrorMat,SHatErrorMat,LMOcase)
     % *** Plot tube ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     % ****** Constants

@@ -1,3 +1,4 @@
+% Author: Shabnam Khodakaramzadeh, researcher at TU Delft
 function [SigmaHat]= computeSigmaHat(n_xi,xiMat,N)
 % Computing 'SigmaHat' matrix (experimental covariance matrix of 'xi')
 %           'SigmaHat' is an estimation for 'SigmaTrue' matrix

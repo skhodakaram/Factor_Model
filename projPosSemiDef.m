@@ -1,3 +1,4 @@
+% Author: Shabnam Khodakaramzadeh, researcher at TU Delft
 function [MatProj]= projPosSemiDef(Mat) 
 % Projection on the positive semidefinite cone 
     n= size(Mat,1);

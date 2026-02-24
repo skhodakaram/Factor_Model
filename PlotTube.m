@@ -1,3 +1,4 @@
+% Author: Shabnam Khodakaramzadeh, researcher at TU Delft
 function [ Output ] = PlotTube(data, param, ColorTube)
 % plot a tube for data given the size "param.interval"
 % data: experiments * param.values

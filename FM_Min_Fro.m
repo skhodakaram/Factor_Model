@@ -1,3 +1,4 @@
+% Author: Shabnam Khodakaramzadeh, researcher at TU Delft
 function [SigmaStar,LStar,DStar,optObjVal]= FM_Min_Fro(SigmaHat,epsD)
 % Min. with Frobenius norm constraint - solved by MOSEK
     fprintf('Running FM_Min_Fro: \n')

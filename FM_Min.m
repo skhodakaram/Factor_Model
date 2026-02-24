@@ -1,3 +1,4 @@
+% Author: Shabnam Khodakaramzadeh, researcher at TU Delft
 function [SigmaStar,LStar,DStar,optObjVal]= FM_Min(SigmaHat,epsD) 
 % Min. problem with LMI constraint corresponding to Gelbrich distance - solved by MOSEK
     fprintf('Running FM_Min: \n')

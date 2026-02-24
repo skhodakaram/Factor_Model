@@ -1,3 +1,4 @@
+% Author: Shabnam Khodakaramzadeh, researcher at TU Delft
 function [SigmaStar,LStar,DStar,optObjVal]= FM_Min_KL(SigmaHat,epsD) 
 % Min. with Kullback-Leibler divergence constraint - solved by MOSEK
     fprintf('Running FM_Min_KL: \n')

@@ -1,3 +1,4 @@
+% Author: Shabnam Khodakaramzadeh, researcher at TU Delft
 function [gamma]= minOverGammaBisection(partialObjFunc_gamma,LB0,UB0)
 % This function is used for finding the minimum of a convex function, objFunc_gamma, using bisection method 
 % partialObjFunc_gamma is the partial derivative of objFunc_gamma with respect to gamma

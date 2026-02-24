@@ -1,3 +1,4 @@
+% Author: Shabnam Khodakaramzadeh, researcher at TU Delft
 function [eigVec,eigVal]= eVec_eVal_sort_Descending(Matrix)
 % The eigenvalues of 'Matrix' are sorted in decreasing order in the 'eigVal'. 
 % The corresponding eigenvectors are also sorted in 'eigVec'
